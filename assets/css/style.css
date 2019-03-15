@@ -1,15 +1,15 @@
 .answer-button {
     width: 100%;
     height: 50px;
-    background: rgba(255, 72, 48, .3);
+    background: white;
     margin-bottom: 15px;
 }
-
+/* 
 .answer-button:hover {
-    /* /* background: red; */
+    background: red; 
     background: rgb(98, 244, 66, .5);
     margin-bottom: 15px;
-}
+} */
 
 
 .correct-answer {
@@ -23,7 +23,7 @@
 .wrong-answer {
     width: 100%;
     height: 50px;
-    background: rgba(98, 244, 66, .5);
+    background: rgba(255, 72, 48, .3);
     margin-bottom: 15px;
 }
 
