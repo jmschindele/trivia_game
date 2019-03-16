@@ -31,3 +31,7 @@
 #timer {
     font-size: 100px;
 }
+
+.hide {
+    display: none;
+}

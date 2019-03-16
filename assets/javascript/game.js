@@ -94,10 +94,60 @@ $(document).ready(function() {
     startTimer();}
     else{
       //display score screen
+      clearInterval(count);
+      
+      $("#state-1").toggleClass("hide")
+      $("#final-score").html(`Your Score: ${score}/${question.length}`)
+      $("#state-3").toggleClass("hide")
 
+      clearInterval(count);
+      clearInterval(reset);
+      $("#play-again").on("click", replay);
     }
   }
 
+  function replay() {
+    score = 0;
+    num = 0;
+
+    //update questions and answers
+
+    randomQ = question[num];
+    randomA = answer[num];
+    rightA = randomA[randomA[4]];
+    // reset button classes to not show answer
+
+    $("#a1").removeClass("wrong-answer correct-answer");
+    $("#a2").removeClass("wrong-answer correct-answer");
+    $("#a3").removeClass("wrong-answer correct-answer");
+    $("#a4").removeClass("wrong-answer correct-answer");
+
+    //set timer running to true. This prevents duplicate inputs and score manipulation.
+
+    timerRunning = true;
+    // clear interval timer from showAnswer function
+    clearInterval(reset);
+
+    //resets timer to 30 seconds
+    timer = 30;
+    $timer.text(timer);
+    //pull a new question
+    $question.text(randomQ);
+
+    //pull corresponding answers for question
+    for (var i = 0; i <= 3; i++) {
+      $answer[i].text(randomA[i]);
+    }
+
+    //start countdown timer
+    num++;
+    startTimer();
+
+   
+    $("#state-1").toggleClass("hide")
+    $("#state-3").toggleClass("hide")
+  
+  }
   //create a timer that starts at 30 seconds and counts down to 0
   var count;
   function startTimer() {
@@ -166,6 +216,20 @@ $(document).ready(function() {
       }
       showAnswer();
     }
-    // }
+    
   });
+
+
+//create a function to reset the game without reloading the page
+
+
+
+
+
+
+
+
+
+
+
 });
