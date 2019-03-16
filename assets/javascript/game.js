@@ -38,7 +38,7 @@ $(document).ready(function() {
       0
     ],
     [6, 7, 8, 9, 2],
-    ["mars", "earth", "saturn", "jupiter", 3],
+    ["Mars", "Earth", "Saturn", "Jupiter", 3],
     ["Gold", "Lead", "Silver", "Carbon", 0],
     ["Mercury", "Earth", "Mars", "Venus", 0],
     [42, "shallot", 90, 9, 1],
@@ -47,27 +47,23 @@ $(document).ready(function() {
   //coordinate the answers with the questions
 
   //generate a random question from the array
-  var numGen = Math.floor(Math.random() * question.length);
-  var randomQ = question[numGen];
-  var randomA = answer[numGen];
-  var rightA = randomA[randomA[4]];
-  //populate the questions div with the question
 
-  // $question.text(randomQ);
-  // $question.text(question[numGen]);
-  // $question.text(randomQ);
-  //populate the answer divs with the corresponding answers
+  var num = 0;
+  var randomQ = question[num];
+  var randomA = answer[num];
+  var rightA = randomA[randomA[4]];
+
 
   initialize();
   // create initialize function to reset timer and pull new question.
   function initialize() {
-    numGen = Math.floor(Math.random() * question.length);
+    if (num < question.length) {
     
 
     //update questions and answers
 
-    randomQ = question[numGen];
-    randomA = answer[numGen];
+    randomQ = question[num];
+    randomA = answer[num];
     rightA = randomA[randomA[4]];
     // reset button classes to not show answer
 
@@ -94,7 +90,12 @@ $(document).ready(function() {
     }
 
     //start countdown timer
-    startTimer();
+    num++;
+    startTimer();}
+    else{
+      //display score screen
+
+    }
   }
 
   //create a timer that starts at 30 seconds and counts down to 0
