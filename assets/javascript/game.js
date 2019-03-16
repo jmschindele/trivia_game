@@ -53,8 +53,12 @@ $(document).ready(function() {
   var randomA = answer[num];
   var rightA = randomA[randomA[4]];
 
-
+$(".start-button").on("click", function() {
+  $("#state-1").toggleClass("hide");
+  $("#state-2").toggleClass("hide");
   initialize();
+})
+  // initialize();
   // create initialize function to reset timer and pull new question.
   function initialize() {
     if (num < question.length) {
@@ -96,7 +100,7 @@ $(document).ready(function() {
       //display score screen
       clearInterval(count);
       
-      $("#state-1").toggleClass("hide")
+      $("#state-2").toggleClass("hide")
       $("#final-score").html(`Your Score: ${score}/${question.length}`)
       $("#state-3").toggleClass("hide")
 
@@ -144,7 +148,7 @@ $(document).ready(function() {
     startTimer();
 
    
-    $("#state-1").toggleClass("hide")
+    $("#state-2").toggleClass("hide")
     $("#state-3").toggleClass("hide")
   
   }
