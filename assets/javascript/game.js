@@ -143,7 +143,7 @@ $(document).ready(function() {
     }
     clearInterval(count);
 
-    reset = setInterval(initialize, 5000);
+    reset = setInterval(initialize, 1500);
   }
 
   var reset;
