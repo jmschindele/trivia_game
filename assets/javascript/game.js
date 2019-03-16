@@ -15,14 +15,14 @@ $(document).ready(function() {
   var question = [
     "What color is the sky?",
     "Which of the following is a dog?",
-    // "How many lunar cycles are in a year?",
-    // "What is Deanna going to have to eat when she is old and toothless?",
-    // "How many planets are in the solar system?",
-    // "Which planet spins the fastest?",
-    // "What is the most malleable metal?",
-    // "Which planet is closest to the sun?",
-    // "What is the square root of an onion?",
-    // "What is the elemental symbol of Iron?"
+    "How many lunar cycles are in a year?",
+    "What is Deanna going to have to eat when she is old and toothless?",
+    "How many planets are in the solar system?",
+    "Which planet spins the fastest?",
+    "What is the most malleable metal?",
+    "Which planet is closest to the sun?",
+    "What is the square root of an onion?",
+    "What is the elemental symbol of Iron?"
   ];
   //create an array with a sub array of answers
   var $answer = [$a1, $a2, $a3, $a4];
