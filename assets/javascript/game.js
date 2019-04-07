@@ -13,36 +13,37 @@ $(document).ready(function() {
   var $question = $("#question");
 
   var question = [
-    "What color is the sky?",
-    "Which of the following is a dog?",
-    "How many lunar cycles are in a year?",
-    "What is Deanna going to have to eat when she is old and toothless?",
-    "How many planets are in the solar system?",
+    "What luxury car company introduced the boxster in 1996?",
+    "Which Olympic sport was featured in the movie “Cool Runnings”?",
+    "Which of the following was not a member of the Beatles?",
+    "What was the name of The Lone Ranger’s horse that he saved from an enraged buffalo?",
+    'In China, what number is considered unlucky because its pronunciation is similar to that for the word “death”?',
     "Which planet spins the fastest?",
+    "Titan, Enceladus, Mimas & Iapetus are just some of the moons orbiting which planet?",
     "What is the most malleable metal?",
-    "Which planet is closest to the sun?",
-    "What is the square root of an onion?",
-    "What is the elemental symbol of Iron?"
+    "The State of Israel was founded in what year?",
+    "In 1783, the first free flight of a hot air balloon carrying a human occurred in what city?"
   ];
   //create an array with a sub array of answers
   var $answer = [$a1, $a2, $a3, $a4];
   var answer = [
-    ["red", "blue", "green", "white", 1],
-    ["Husky", "Mount Lion", "Garden Snake", "Raccoon", 0],
-    [3, 6, 9, 12, 3],
+    ["Cadillac", "Lexus", "Porsche", "Ferarri", 2],
+    ["Sprinting", "Bobsledding", "Curling", "Pole Vaulting", 1 ],
+    ["Ringo Star", "Paul McCartney", "John Lennon", "Eric Claptop", 3],
     [
-      "pickle shakes",
-      "not pickle shakes",
-      "not pickle shakes",
-      "not pickle shakes",
+      "Silver",
+      "Dasher",
+      "Tonto",
+      "Buck",
       0
     ],
-    [6, 7, 8, 9, 2],
+    [4, 7, 8, 13, 0],
     ["Mars", "Earth", "Saturn", "Jupiter", 3],
-    ["Gold", "Lead", "Silver", "Carbon", 0],
-    ["Mercury", "Earth", "Mars", "Venus", 0],
-    [42, "shallot", 90, 9, 1],
-    ["Fe", "Fi", "Fo", "Fum", 0]
+      ["Jupiter", "Saturn", "Uranus", "Neptune", 1], 
+       ["Gold", "Lead", "Silver", "Carbon", 0],
+
+    [1932, 1948, 1954, 1966, 1],
+    ["London", "Rotterdam", "Paris", "Rome", 2]
   ];
   //coordinate the answers with the questions
 
@@ -108,7 +109,7 @@ $(document).ready(function() {
 
       clearInterval(count);
       clearInterval(reset);
-      $("#play-again").on("click", replay);
+      $(document.body).on("click", "#play-again", replay);
     }
   }
 
