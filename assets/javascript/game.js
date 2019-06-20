@@ -29,7 +29,7 @@ $(document).ready(function() {
   var answer = [
     ["Cadillac", "Lexus", "Porsche", "Ferarri", 2],
     ["Sprinting", "Bobsledding", "Curling", "Pole Vaulting", 1 ],
-    ["Ringo Star", "Paul McCartney", "John Lennon", "Eric Claptop", 3],
+    ["Ringo Star", "Paul McCartney", "John Lennon", "Eric Clapton", 3],
     [
       "Silver",
       "Dasher",
