@@ -11,9 +11,9 @@ Uses JavaScript, Bootstrap, jQuery
 If you would like to download and use this code you will need to:
 * clone the repository and open in your browser of choice.
   
-  ## Getting Started
-  1. Starting a game
-  2. Playing the game
+## Getting Started
+1. Starting a game
+2. Playing the game
   
   ### Starting a game
   * On the landing page, you will be given the rules.
